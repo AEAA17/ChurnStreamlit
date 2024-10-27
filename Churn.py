@@ -4,7 +4,8 @@ import plotly.express as px
 
 
 # Caminho para o arquivo CSV
-ARQUIVO_DADOS = r"https://github.com/AEAA17/ChurnStreamlit/blob/main/churn_clientes.csv"
+ARQUIVO_DADOS = "https://raw.githubusercontent.com/AEAA17/ChurnStreamlit/main/churn_clientes.csv"
+
 
 # Carregando o dataset e removendo a coluna de ID
 df_churn = pd.read_csv(ARQUIVO_DADOS)
