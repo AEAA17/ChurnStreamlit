@@ -20,12 +20,9 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-@st.cache_data
-def load_data():
-    return df_churn
 
 # Carregar os dados
-data = load_data()
+data = df_churn
 
 # Converter os valores 1 e 0 na coluna 'churn' para "Sim" e "Não"
 data['churn'] = data['churn'].map({1: 'Sim', 0: 'Não'})
@@ -179,4 +176,5 @@ fig_correlation.update_layout(
 
 # Exibindo o gráfico no Streamlit
 st.plotly_chart(fig_correlation, use_container_width=True)
+
 
